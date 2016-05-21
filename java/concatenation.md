@@ -1,0 +1,11 @@
+# String concatenation de 1 à 9
+
+Remi Forax
+
+> La concatenation de chaine de caractère est une des premières choses que l'on montre à un débutant en Java, pourtant même si cela repose sur un ensemble de mécanismes assez simple (+, StringBuilder et toString), la façon de concaténer des chaines de caractères a changé au fil des versions de Java en culminant avec une implantation à base d'invokedynamic recemment introduite dans la version 9.
+
+> En utilisant le prétexte de la concaténation de chaine de caractères, cette présentation explique le fonctionnement habituel d'une feature en Java, avec le rôle du compilateur, le rôle du JDK, le rôle de la machine virtuelle et de ses JITs.
+
+[Vidéo](https://www.youtube.com/watch?v=U97zT8kA7G4)
+
+`In Progress`
