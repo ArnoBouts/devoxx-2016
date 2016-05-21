@@ -16,7 +16,7 @@
 
 # DevOps, Agilité, Méthodologie et Tests
 
-[De Jenkins Maven/Freestyle à Pipeline (TODO)](devops/jenkins-pipeline.md)
+[De Jenkins Maven/Freestyle à Pipeline](devops/jenkins-pipeline.md)
 
 [A la découverte du service discovery (TODO)](devops/service-discovery.md)
 
