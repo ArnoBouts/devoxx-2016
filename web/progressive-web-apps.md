@@ -13,7 +13,7 @@ Le but des progressives WebApps est d'augmenter l'utilisation et l'utilisabilit�
 Ce qui caractérise une progressive WebApp :
 - Progressive
 
-  L'application fonctionne partout, certaines fonctiionnalités étant reservées à certains navigateurs.
+  L'application fonctionne partout, certaines fonctionnalités étant reservées à certains navigateurs.
 
 - Responsive
 - Offline
