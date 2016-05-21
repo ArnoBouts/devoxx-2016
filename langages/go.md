@@ -10,4 +10,16 @@ Jean-Laurent de Morlhon
 
 [Vidéo](https://www.youtube.com/watch?v=LIFZPzupwgs)
 
-`In Progress`
+Il est possible que Maurice ne doive surtout pas coder en go, mais il se doit de visionner cette conférence qui reste l'un de mes meilleurs moments de ce Devoxx 2016.
+
+Avec beaucoup d'humour, Jean-Laurent nous présente les "_subtilités_" du langage sans omettre ses possibilités.
+
+- serveur web en 4 lignes de codes
+- abstraction de la gestion multithread avec goroutine
+- cross-plateforme
+
+En résumé, un langage système magique pour faire de petits serveurs, des microservices ou de la ligne de commande.
+
+Maurice ne devrait probablement pas coder en go. Non pas pour les raisons évoquées lors de cette conférence, mais plutôt parce que Maurice n'en aura vraisemblablement pas besoin.
+
+Si tel était le cas, il devrait pouvoir se plier aux contraintes : pas besoin de mettre de $ devant le nom des variables :p
