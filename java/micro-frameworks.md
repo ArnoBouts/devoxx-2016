@@ -10,4 +10,77 @@ Laurent Baresse & Igor Laborie
 
 > Vous développerez un service RESTfull avec SparkJava et Feign s'intégrant au sein d'une architecture "microservices".
 
-`In Progress`
+[Exercices](https://github.com/ilaborie/FeignSparkJava-exos)
+
+Hands on s'appuyant sur une application de gestion de cave à vin (je retiens l'idée) durant lequel nous avons mis en oeuvre Feign et SparkJava.
+
+Je retiens essentiellement __Feign__ qui à l'image de spring-data-jpa permet d'appeler des resources REST grace à quelques anotations sur une interface : simple et efficace.
+
+```
+package devoxx.microframeworks.exos.services;
+
+import devoxx.microframeworks.exos.models.Stock;
+import feign.Headers;
+import feign.Param;
+import feign.RequestLine;
+
+public interface StockService {
+
+    @RequestLine("GET /api/wines/{id}/qty")
+    Stock findByWine(@Param("id") String wid);
+
+    @RequestLine("POST /api/wines/{id}/order?qty={nbr}")
+    @Headers("Content-Type: application/json")
+    public String createOrder(@Param("id") String wid, @Param("nbr") int quantity);
+
+}
+```
+
+__SparkJava__ n'est pas non plus dénué d'intérêts, mais il me semble qu'il existe pas mal d'alternatives. Il s'agit d'un micro framework permetant de créer des applications Web facilement.
+
+Main :
+
+```
+package devoxx.microframeworks.exos;
+
+import devoxx.microframeworks.exos.routes.CellarRoute;;
+import spark.ResponseTransformer;
+
+import static spark.Spark.*;
+
+public class Main {
+    public static void main(String... args) {
+        Configuration configuration = Configuration.INSTANCE;
+        ResponseTransformer encoder = object -> configuration.getGson().toJson(object);
+
+        //...
+
+        // Déclaration des fichiers static
+        staticFileLocation("/public");
+
+        // Déclaration des routes
+        CellarRoute cellarRoute = new CellarRoute();
+        get("api/cellar", cellarRoute::handleMyCellar, encoder);
+        post("api/cellar/drink/:wid", cellarRoute::handleDrink, encoder);
+
+        //...
+
+        // Gestion des erreurs
+        exception(SecurityException.class, (e, request, response) -> {
+            response.status(403);
+        });
+
+        // CORS
+        options("/*", (request, response) -> "");
+        after((request, response) -> {
+            response.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
+            response.header("Access-Control-Allow-Origin", "*");
+            response.header("Access-Control-Allow-Headers", "Content-Type,Authorization,X-Requested-With,Content-Length,Accept,Origin,");
+            response.header("Access-Control-Allow-Credentials", "true");
+        });
+    }
+
+}
+```
+
+Au delà des architectures microservices, je vous conseille vivement de regarder Feign dès que vous avez besoin de faire des appels REST en Java.
