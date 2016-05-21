@@ -16,7 +16,7 @@ Hands on s'appuyant sur une application de gestion de cave à vin (je retiens l'
 
 Je retiens essentiellement __Feign__ qui à l'image de spring-data-jpa permet d'appeler des resources REST grace à quelques anotations sur une interface : simple et efficace.
 
-```
+```java
 package devoxx.microframeworks.exos.services;
 
 import devoxx.microframeworks.exos.models.Stock;
@@ -40,7 +40,7 @@ __SparkJava__ n'est pas non plus dénué d'intérêts, mais il me semble qu'il e
 
 Main :
 
-```
+```java
 package devoxx.microframeworks.exos;
 
 import devoxx.microframeworks.exos.routes.CellarRoute;;
