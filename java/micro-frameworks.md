@@ -38,8 +38,6 @@ public interface StockService {
 
 __SparkJava__ n'est pas non plus dénué d'intérêts, mais il me semble qu'il existe pas mal d'alternatives. Il s'agit d'un micro framework permetant de créer des applications Web facilement.
 
-Main :
-
 ```java
 package devoxx.microframeworks.exos;
 
