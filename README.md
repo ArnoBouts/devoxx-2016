@@ -22,7 +22,7 @@
 
 # Web, HTML5 et UX
 
-[Progressive Web Apps (TODO)](web/progressive-web-apps.md)
+[Progressive Web Apps](web/progressive-web-apps.md)
 
 [D'Angular 1 à Angular 2 : Préparez vous dès maintenant à la migration (TODO)](web/angular-migration.md)
 
