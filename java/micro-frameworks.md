@@ -14,7 +14,7 @@ Laurent Baresse & Igor Laborie
 
 Hands on s'appuyant sur une application de gestion de cave à vin (je retiens l'idée) durant lequel nous avons mis en oeuvre Feign et SparkJava.
 
-Je retiens essentiellement __Feign__ qui à l'image de spring-data-jpa permet d'appeler des resources REST grace à quelques anotations sur une interface : simple et efficace.
+Je retiens essentiellement __Feign__ qui à l'image de spring-data-jpa permet d'appeler des resources REST grace à quelques annotations sur une interface : simple et efficace.
 
 ```java
 package devoxx.microframeworks.exos.services;
